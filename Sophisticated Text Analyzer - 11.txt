@@ -1,0 +1,21 @@
+Sophisticated Text Analyzer
+Create a Java program that performs a sophisticated analysis of a given multi-line text document. The document should be read from a file. The analysis will focus on identifying the paragraph that best represents the theme of the document based on keyword density.
+
+Detailed Requirements:
+
+Reading and Preprocessing:
+
+Read a multiline text document from a file using Java 11's File API.
+Use the String methods such as lines(), strip() to preprocess the text by removing excessive whitespace and separating the text into individual paragraphs.
+Keyword Extraction:
+
+Prompt the user to enter a set of keywords related to the theme of the document.
+Normalize the keywords and the text for comparison (e.g., convert all to lower case, remove punctuation).
+Paragraph Analysis:
+
+For each paragraph, calculate the density of the provided keywords. The density is defined as the number of times keywords appear in the paragraph divided by the total number of words in that paragraph.
+Use the Optional<String> class to handle the identification of the paragraph with the highest keyword density. If two paragraphs have the same density, the first one encountered should be selected.
+Result Output:
+
+Use the isEmpty() method to determine if a suitable paragraph was found. If found, print this paragraph along with its keyword density.
+If no paragraph sufficiently matches the criteria (e.g., no keywords found), the program should use Optional to reflect that no suitable paragraph was found and print an appropriate message.
